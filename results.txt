@@ -1,0 +1,82 @@
+Appointments: 7,699
+status
+Attended     5890
+No-show      1251
+Cancelled     558 
+
+Overall no-show rate (excluding cancelled): 17.5%
+
+No-show rate by Weekday:
+              rate     n
+day_of_week             
+Saturday     18.5%  1388
+Sunday       17.4%  1247
+Monday       16.6%  1320
+Tuesday      16.9%  1184
+Wednesday    15.2%  1134
+Thursday     21.4%   868 
+
+No-show rate by Booking lead time:
+             rate     n
+lead_group             
+0-2 days    13.8%  2290
+3-7 days    15.2%  2271
+8-14 days   19.7%  1474
+15+ days    27.0%  1106 
+
+No-show rate by Reminder sent:
+                rate     n
+reminder_sent             
+False          26.3%  2557
+True           12.6%  4584 
+
+No-show rate by New patient:
+              rate     n
+new_patient             
+False        15.8%  5403
+True         23.0%  1738 
+
+No-show rate by Appointment type:
+                        rate     n
+appointment_type                  
+Consultation           23.6%  1017
+Whitening              19.2%   578
+Orthodontic follow-up  18.7%  1007
+Check-up               17.2%  1409
+Filling                16.9%  1249
+Cleaning               13.8%  1287
+Root canal             13.6%   594 
+
+Chi-square tests (H0: no-show is independent of the factor)
+  reminder_sent   chi2 =   210.7   p = 9.63e-48
+  new_patient     chi2 =    47.5   p = 5.43e-12
+  lead_group      chi2 =   105.0   p = 1.31e-22
+  day_of_week     chi2 =    15.6   p = 8.10e-03
+
+Odds ratios (above 1 = more no-shows, below 1 = fewer):
+reminder_sent         0.39
+root_canal            0.77
+age_18_34             1.17
+thursday              1.27
+lead_days_per_week    1.33
+early_or_late_hour    1.39
+consultation          1.51
+new_patient           1.66 
+
+Reminder coverage now: 64%
+Expected no-shows now: 1251; with reminders for all: 905
+Estimated no-shows avoided per year: 346 (28% of all no-shows)
+
+Appointments per doctor (year):
+doctor_id
+Dr_01    870
+Dr_02    874
+Dr_03    829
+Dr_04    879
+Dr_05    845
+Dr_06    833
+Dr_07    907
+Dr_08    821
+Dr_09    841 
+
+Figures saved in figures/
